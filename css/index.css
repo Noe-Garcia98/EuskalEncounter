@@ -1,0 +1,24 @@
+#menu{
+    background-color: #000000;
+    margin: 0px;
+    padding: 0px;
+}
+.desplegable{
+    color: white;
+    font-family: arial;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+.entra{
+    background-color: #0693f1;
+    color: white;
+    font-family: arial;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+body{
+   margin: 0px;
+}
