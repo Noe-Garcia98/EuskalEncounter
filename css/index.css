@@ -1,24 +1,133 @@
-#menu{
-    background-color: #000000;
+.nav{
+    background-color: #05285a;
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: center;
 }
-.desplegable{
-    color: white;
-    font-family: arial;
+
+.desplegable1{
+    position: relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transition: background 0.2s, color 0.2s;
+    
+}
+.desplegable2{
+    position: relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.desplegable3{
+    position:relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.desplegable4{
+    position: relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+a{
+    display: inline;
+    padding: 10px 20px;
+    color: #fff;
     text-decoration: none;
-    padding: 10px;
-    display: inline-block;
+    transition: background 0.2s, color 0.2s;
 }
-.entra{
-    background-color: #0693f1;
-    color: white;
-    font-family: arial;
-    border: none;
-    border-radius: 15px;
+/* Submenú oculto por defecto */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  font-style: #0e0101;
+  background: #e5e8f0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+  z-index: 10;
+}
+
+/* Mostrar al pasar el ratón o al navegar con teclado */
+.desplegable1:hover .submenu,
+.desplegable2:hover .submenu,
+.desplegable3:hover .submenu,
+.desplegable4:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  margin-top: 10px;
+  padding: 10px;
+}
+.contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(252, 250, 253);
+    font-size: 40px;
+    font-family: roboto, sans-serif;
+    border: 2px solid rgb(252, 250, 253); 
+    color: rgb(252, 250, 253); 
+    background-color: rgb(139, 11, 11);
     padding: 10px;
-    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.contenedor2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(252, 250, 253);
+    font-size: 30px;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    border: 2px solid rgb(252, 250, 253); 
+    color: rgb(252, 250, 253); 
+    background-color: rgb(47, 63, 117);
+    padding: 10px;
+    border-radius: 15px;
+}
+.dessub{
+    color: rgb(10, 7, 12);
+    font-size: 13px;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    color: rgb(10, 7, 12); 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.boton{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(252, 250, 253);
+    font-size: 20px;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    border: 2px solid rgb(252, 250, 253); 
+    color: rgb(10, 7, 12); 
+    background-color: rgb(203, 252, 28);
+    padding: 10px;
+    border-radius: 15px;
 }
 body{
    margin: 0px;
+   background-color: #05285a;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.card1, .card2, .card3, .card4, .card5, .card6{
+    background-color: #e5e8f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }

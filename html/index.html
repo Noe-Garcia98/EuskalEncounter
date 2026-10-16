@@ -8,44 +8,42 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <!-- Esto es el logo del evento-->
             <img src="../img/euskal_31_logo_web.png" width="157" height="51">
-
+        <ul>    
              <!-- Esto es el menu principal-->
-            <li class="menu"><a href="#eventos">EVENTOS</a>
-            <ul class="desplegable">
-                <li><a href="#hardware">HARDWARE</a></li>
-                <li><a href="#software">SOFTWARE LIBRE</a></li>
-                <li><a href="#juegos">JUEGOS</a></li>
-                <li><a href="#streaming">STREAMING</a></li>
-                <li><a href="#otrasactividades">OTRAS ACTIVIDADES</a></li>
+
+        <li class="desplegable1"><a href="#eventos">EVENTOS</a>
+             <ul class="submenu">
+                <li><a class="dessub" href="#hardware">HARDWARE</a></li>
+                <li><a class="dessub" href="#software">SOFTWARE LIBRE</a></li>
+                <li><a class="dessub" href="#juegos">JUEGOS</a></li>
+                <li><a class="dessub" href="#streaming">STREAMING</a></li>
+                <li><a class="dessub" href="#otrasactividades">OTRAS ACTIVIDADES</a></li>
+            </ul>
+        </li>
+        
+        <li class="desplegable2"><a href="#asistencia">ASISTENCIA</a>
+            <ul class="submenu">
+                <li><a class="dessub" href="#quetraer">QUE TRAER</a></li>
+                <li><a class="dessub" href="#inscribirse">INSCRIBIRSE</a></li>
+                <li><a class="dessub" href="#normasparticipacion">NORMAS GENERALES DE PARTICIPACION</a></li>
+            </ul>
+        </li>
+        <li class="desplegable3"><a href="#gamegune">GAMEGUNE</a>
+            <ul class="submenu">
+                <li><a class="dessub" href="#quees">QUÉ ES</a></li>
+                <li><a class="dessub" href="#torneo">TORNEO ACTUAL</a></li>
             </ul>
             </li>
 
-            <li class="menu"><a href="#asistencia">ASISTENCIA</a>
-             <ul class="desplegable">
-                <li><a href="#quetraer">QUE TRAER</a></li>
-                <li><a href="#inscribirse">INSCRIBIRSE</a></li>
-                <li><a href="#normasparticipacion">NORMAS GENERALES DE PARTICIPACION</a></li>
-            </ul>
-            </li>
-
-            <li class="menu"><a href="#gamegune">GAMEGUNE</a>
-            <ul class="desplegable">
-                <li><a href="#quees">QUÉ ES</a></li>
-                <li><a href="#torneo">TORNEO ACTUAL</a></li>
-            </ul>
-            </li>
-
-            <li class="menu"><a href="#info">INFO</a>
-            <ul class="desplegable">
-                <li><a href="#paraorganizadores">PARA ORGANIZADORES</a></li>
-                <li><a href="#paraasistentes">PARA ASISTENTES</a></li>
-                 <li><a href="#contacto">CONTACTO</a></li>
-            </ul>
-            </li>
-            <input type="button" name="Entra" id="enter" value="ENTRA">
+            <li class="desplegable4"><a href="#info">INFO</a>
+            <ul class="submenu">
+                <li><a class="dessub" href="#paraorganizadores">PARA ORGANIZADORES</a></li>
+                <li><a class="dessub" href="#paraasistentes">PARA ASISTENTES</a></li>
+                <li><a class="dessub" href="#contacto">CONTACTO</a></li>
+        
         </nav>
     </header>
     <main>
@@ -53,64 +51,67 @@
             <picture>
                 <!-- Esto es la imagen principal-->
                 <img src="../img/euskalencounter-principal.jpg" width="1525vw">
-                <p class="texto">EUSKAL ENCOUNTER</p>
-                <hr>
-                <p>23 - 26 2026 BEC BILBAO</p>
-                <input type="button" value="Ver resutados"/><br>
+                <div class="contenedor">EUSKAL ENCOUNTER</div>
+                    <div class="contenedor2">23 - 26 2026 BEC BILBAO</div>
+                    <input type="button" class="boton" value="Ver resutados"/><br>
+
+                </div>
+
             </picture>
         </section>
         <section id="categorias">
-
         <div class="card">
+            <div class="card1">
                 <img src="../img/creatividad_digital_card.jpg" width="630" height="340">
                 <h3>CREATIVIDAD DIGITAL</h3>
                 <p>Es el arte de la era de los ordenadores. Se materializa en tres grandes temas, la creación de imágenes digitales...</p>
                 <a href="#">Leer más →</a>
-            </div><br>
+            </div>
 
-            <div class="card">
+            <div class="card2">
                 <img src="../img/hardware_card.jpg" width="630" height="340">
                 <h3>HARDWARE</h3>
                 <p>El modding, además de la modificación, cambio y personalización de los equipos, de sus componentes, los periféricos...</p>
                 <a href="#">Leer más →</a>
-            </div><br>
+            </div>
 
-            <div class="card">
+            <div class="card3">
                 <img src="../img/software_libre_card.jpg" width="630" height="340">
                 <h3>SOFTWARE LIBRE</h3>
                 <p>Desde tu móvil hasta los servidores de la Euskal Encounter, el mundo no funcionaría sin el software libre. ¡Forma parte de él!</p>
                 <a href="#">Leer más →</a>
-            </div><br>
+            </div>
 
-            <div class="card">
+            <div class="card4">
                 <img src="../img/juegos_card.jpg" width="630" height="340">
                 <h3>JUEGOS</h3>
                 <p>Participa y reta a tus amigos en las diversas competiciones de juegos para PC y videoconsolas en esta edición de la Euskal Encounter. ¡No te las puedes perder!</p>
                 <a href="#">Leer más →</a>
-            </div><br>
+            </div>
 
-            <div class="card">
+            <div class="card5">
                 <img src="../img/streaming_card.jpg" width="630" height="340">
                 <h3>STREAMING</h3>
                 <p>Alguien tiene que contarle al mundo lo que pasa en las Encounters. Si te gusta crear contenido —directos, vídeos o bailar...</p>
                 <a href="#">Leer más →</a>
-            </div><br>
+            </div>
 
-            <div class="card">
+            <div class="card6">
                 <img src="../img/otras_actividades_card.jpeg" width="630" height="340">
                 <h3>OTRAS ACTVIDADES</h3>
                 <p>No importa si eres un scener, un gamer, te gusta el modding, o si simplemente no encajas en ningún otro lado... ¡Esta es tu sección! Solo te pedimos que dejes la vergüenza a un lado.</p>
                 <a href="#">Leer más →</a>
-            </div><br>
+            </div>
+        </div>
     </main>
     <footer>
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/discord.png" width="50" height="30">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/Instagram.png" width="50" height="30">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/twitch.png" width="50" height="30">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/YouTube.png" width="50" height="30">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/x.png" width="50" height="30">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/Tiktok.png" width="50" height="30">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/Facebook.png" width="50" height="30">
+        <img src="../img/discord.png" width="50" height="30">
+        <img src="../img/Instagram.png" width="50" height="30">
+        <img src="../img/twitch.png" width="50" height="30">
+        <img src="../img/YouTube.png" width="50" height="30">
+        <img src="../img/x.png" width="50" height="30">
+        <img src="../img/Tiktok.png" width="50" height="30">
+        <img src="../img/Facebook.png" width="50" height="30">
          <p></p>
         <a href="#BUSCAR">BUSCAR</a>
         <a href="#CONTACTO">CONTACTO</a>
@@ -121,12 +122,12 @@
         <a href="#MAPA WEB">MAPA WEB</a>
         <hr>
         <p></p>
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/EG_Certificado_Sello_EVENTO_Color-228x300.png" width="150" height="150">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/dfb-bfa.png" height="150">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/bbk-fundazioa.png" width="160" height="55">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/loog-grupo-spri.png" width="220" height="50">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/gobierno-vasco-logo-png-transparent.png" width="300" height="200">
-        <img src="../EUSKAL ENCOUNTER HTML/IMAGENES/EUSKALTEL-RETO.png" width="200" height="100">
+        <img src="../img/EG_Certificado_Sello_EVENTO_Color-228x300.png" width="150" height="150">
+        <img src="../img/dfb-bfa.png" height="150">
+        <img src="../img/bbk-fundazioa.png" width="160" height="55">
+        <img src="../img/loog-grupo-spri.png" width="220" height="50">
+        <img src="../img/gobierno-vasco-logo-png-transparent.png" width="300" height="200">
+        <img src="../img/EUSKALTEL-RETO.png" width="200" height="100">
     </footer>  
 </body>
 </html>
