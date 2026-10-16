@@ -11,7 +11,7 @@
         <nav class="nav">
             <!-- Esto es el logo del evento-->
             <img src="../img/euskal_31_logo_web.png" width="157" height="51">
-        <ul>    
+    <ul>
              <!-- Esto es el menu principal-->
 
         <li class="desplegable1"><a href="#eventos">EVENTOS</a>
@@ -23,7 +23,6 @@
                 <li><a class="dessub" href="#otrasactividades">OTRAS ACTIVIDADES</a></li>
             </ul>
         </li>
-        
         <li class="desplegable2"><a href="#asistencia">ASISTENCIA</a>
             <ul class="submenu">
                 <li><a class="dessub" href="#quetraer">QUE TRAER</a></li>
@@ -36,71 +35,82 @@
                 <li><a class="dessub" href="#quees">QUÉ ES</a></li>
                 <li><a class="dessub" href="#torneo">TORNEO ACTUAL</a></li>
             </ul>
-            </li>
-
-            <li class="desplegable4"><a href="#info">INFO</a>
+        </li>
+         <li class="desplegable4"><a href="#info">INFO</a>
             <ul class="submenu">
                 <li><a class="dessub" href="#paraorganizadores">PARA ORGANIZADORES</a></li>
                 <li><a class="dessub" href="#paraasistentes">PARA ASISTENTES</a></li>
                 <li><a class="dessub" href="#contacto">CONTACTO</a></li>
-        
+            </ul>
+         </li>
+    </ul>
+        <fieldset class="singin">
+            <legend class="datos">Datos de entrada</legend>
+            <form class="form">
+                <label class="fuenteform" for = "usuario">Usuario:</label>
+                <input type="text" placeholder="Nombre de usuario..." id="usuario" name="usuario">
+                <label class="fuenteform" for = "contraseña">Contraseña:</label>
+                <input type="password" placeholder="Contraseña..." id="contraseña" name="contraseña">
+                <input type="submit" class="iniciar" value="Iniciar sesión">
+            </fieldset>
+            </form>
         </nav>
     </header>
     <main>
         <section>
-            <picture>
-                <!-- Esto es la imagen principal-->
-                <img src="../img/euskalencounter-principal.jpg" width="1525vw">
-                <div class="contenedor">EUSKAL ENCOUNTER</div>
-                    <div class="contenedor2">23 - 26 2026 BEC BILBAO</div>
-                    <input type="button" class="boton" value="Ver resutados"/><br>
-
-                </div>
-
-            </picture>
+        <picture>
+            <!-- Esto es la imagen principal-->
+            <img src="../img/euskalencounter-principal.jpg" width="1525vw">
+            <div class="contenedor">EUSKAL ENCOUNTER</div>
+                <div class="contenedor2">23 - 26 2026 BEC BILBAO</div>
+                <input type="button" class="boton" value="Ver resutados anteriores"/><br>
+             </div>
+         </picture>
         </section>
         <section id="categorias">
         <div class="card">
             <div class="card1">
                 <img src="../img/creatividad_digital_card.jpg" width="630" height="340">
-                <h3>CREATIVIDAD DIGITAL</h3>
+                <h3 class="container">CREATIVIDAD DIGITAL</h3>
+                <div>
                 <p>Es el arte de la era de los ordenadores. Se materializa en tres grandes temas, la creación de imágenes digitales...</p>
-                <a href="#">Leer más →</a>
+                <a class="readMore" href="#">Leer más →</a>
+                </div>
             </div>
 
             <div class="card2">
                 <img src="../img/hardware_card.jpg" width="630" height="340">
                 <h3>HARDWARE</h3>
                 <p>El modding, además de la modificación, cambio y personalización de los equipos, de sus componentes, los periféricos...</p>
-                <a href="#">Leer más →</a>
+                <a class="readMore" href="#">Leer más →</a>
             </div>
 
             <div class="card3">
                 <img src="../img/software_libre_card.jpg" width="630" height="340">
                 <h3>SOFTWARE LIBRE</h3>
                 <p>Desde tu móvil hasta los servidores de la Euskal Encounter, el mundo no funcionaría sin el software libre. ¡Forma parte de él!</p>
-                <a href="#">Leer más →</a>
+                <a class="readMore" href="#">Leer más →</a>
             </div>
 
             <div class="card4">
                 <img src="../img/juegos_card.jpg" width="630" height="340">
                 <h3>JUEGOS</h3>
                 <p>Participa y reta a tus amigos en las diversas competiciones de juegos para PC y videoconsolas en esta edición de la Euskal Encounter. ¡No te las puedes perder!</p>
-                <a href="#">Leer más →</a>
+                <a class="readMore" href="#">Leer más →</a>
             </div>
 
             <div class="card5">
                 <img src="../img/streaming_card.jpg" width="630" height="340">
                 <h3>STREAMING</h3>
                 <p>Alguien tiene que contarle al mundo lo que pasa en las Encounters. Si te gusta crear contenido —directos, vídeos o bailar...</p>
-                <a href="#">Leer más →</a>
+                <a class="readMore" href="#">Leer más →</a>
             </div>
 
             <div class="card6">
                 <img src="../img/otras_actividades_card.jpeg" width="630" height="340">
                 <h3>OTRAS ACTVIDADES</h3>
                 <p>No importa si eres un scener, un gamer, te gusta el modding, o si simplemente no encajas en ningún otro lado... ¡Esta es tu sección! Solo te pedimos que dejes la vergüenza a un lado.</p>
-                <a href="#">Leer más →</a>
+                <a class="readMore" href="#">Leer más →</a>
             </div>
         </div>
     </main>
