@@ -100,36 +100,31 @@ a{
 }
 /*Texto sobre la imagen principal */
 .contenedor{
-    position: absolute;
-    top: 45%;
-    left: 225px;
+    position: relative;
+    top: -510px;
+    left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 50px;
     font-family: roboto, sans-serif;
-    border: 2px solid rgb(137, 84, 34);
     color: rgb(252, 250, 253);
-    background-color: rgb(139, 11, 11);
     padding: 10px;
-    border-style: double;
 }
 .contenedor2{
-    position: absolute;
-    top: 55%;
-    left: 200px;
+    position: relative;
+    top: -525px;
+    left: 180px;
     transform: translate(-50%, -50%);
     font-size: 30px;
     font-family: roboto, sans-serif;
     text-align: center;
-    border: 2px solid rgb(130, 95, 147);
     color: rgb(252, 250, 253);
-    background-color: rgb(47, 63, 117);
     padding: 10px;
-    border-style:double;
+
 }
 .boton{
-    position: absolute;
-    top: 63%;
-    left: 10%;
+    position: relative;
+    top: -530px;;
+    left: 9%;
     transform: translate(-50%, -50%);
     color: rgb(252, 250, 253);
     font-size: 20px;
