@@ -1,0 +1,242 @@
+.nav{
+    background-color: #05285a;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: left;
+}
+/*Menu desplegable*/
+.desplegable1{
+    position: relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transition: background 0.2s, color 0.2s;
+}
+.desplegable2{
+    position: relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.desplegable3{
+    position:relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.desplegable4{
+    position: relative;
+    display: inline;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+a{
+    display: inline;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+/* Formulario */
+.form{
+    margin-top: 12px;
+    margin-left: 100px;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #e5e8f0;
+}
+.singin{
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #0c1e41;
+.datos{
+    color: #fff;
+}
+}
+.iniciar{
+    color: rgb(252, 250, 253);
+    font-family: roboto, sans-serif;
+    border: 2px solid rgb(252, 250, 253);
+    color: rgb(10, 7, 12);
+    background-color: rgb(203, 252, 28);
+    border-color: #0e0101;
+    border-radius: 15px;
+
+}
+/* Submenú oculto por defecto */
+.submenu {
+    list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  font-style: #0e0101;
+  background: #e5e8f0;
+  opacity: 20;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+  z-index: 10;
+  text-align: justify;
+}
+/* Mostrar al pasar el ratón o al navegar con teclado */
+.desplegable1:hover .submenu,
+.desplegable2:hover .submenu,
+.desplegable3:hover .submenu,
+.desplegable4:hover .submenu {
+  opacity: 3;
+  visibility: visible;
+  transform: translateY(0);
+  margin-top: 10px;
+  padding: 15px 15px;
+  background-color: #6587a9;
+}
+.dessub{
+    color: rgb(10, 7, 12);
+    font-size: 13px;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    color: rgb(10, 7, 12);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+}
+/*Texto sobre la imagen principal */
+.contenedor{
+    position: relative;
+    top: -510px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: roboto, sans-serif;
+    color: rgb(252, 250, 253);
+    padding: 10px;
+}
+.contenedor2{
+    position: relative;
+    top: -525px;
+    left: 180px;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    color: rgb(252, 250, 253);
+    padding: 10px;
+
+}
+.boton{
+    position: relative;
+    top: -530px;;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    color: rgb(252, 250, 253);
+    font-size: 20px;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    border: 2px solid rgb(252, 250, 253);
+    color: rgb(10, 7, 12);
+    background-color: rgb(203, 252, 28);
+    padding: 10px;
+    border-radius: 15px;
+}/* Cuerpo */
+body{
+   margin: 0px;
+   background-color: #092043;
+}
+/*Categorías y eventos */
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.card1, .card2, .card3, .card4, .card5, .card6{
+    background: linear-gradient(135deg, #6587a9, #113a73);
+    padding: 20px;
+    color: white;
+    border-radius: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.readMore{
+    background: #343d4b;
+    padding: 12px 15px;
+    border-color: #fff;
+    border-radius: 15px;
+}
+
+/* Contenedor principal de todo el pie de pagina */
+footer {
+    background-color: #0d2c40; 
+    padding: 40px 20px;
+    gap: 30px;                 
+    font-family: sans-serif;
+}
+
+/* 1. SECCION DE REDES SOCIALES (Las primeras imagenes de arriba) */
+footer > img[src*="/img/discord.png"],
+footer > img[src*="instagram"],
+footer > img[src*="twitch"],
+footer > img[src*="youtube"],
+footer > img[src*="x.png"],
+footer > img[src*="tiktok"],
+footer > img[src*="facebook"] {
+    display: inline-block;
+    margin: 0 10px;            
+    transition: transform 0.2s ease;
+}
+
+/* Agrupar visualmente los iconos en linea */
+footer {
+    text-align: center;
+}
+
+/* MENU DE ENLACES (BUSCAR, CONTACTO, QUIENES SOMOS...) */
+footer > a {
+    color: rgb(233, 229, 229) !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    margin: 0 12px;            
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+footer > a:hover {
+    color: #e65c00 !important; 
+}
+
+
+footer > hr {               
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 18px 0;
+}
+
+/* SECCIÓN DE PATROCINADORES */ 
+footer > img[src*="Certificado"],
+footer > img[src*="dfb-bfa"],
+footer > img[src*="bbk"],
+footer > img[src*="spri"],
+footer > img[src*="gobierno-vasco"],
+footer > img[src*="EUSKALTEL"] {
+    display: inline-block;
+    max-height: 50px;          /* Nivela la altura para que se vean organizadas */
+    width: auto !important;    /* Sobrescribe los altos del HTML para no deformar */
+    margin: 15px 25px;         /* Espaciado para que respiren entre ellas */
+    vertical-align: middle;
+    filter: brightness(1);
+    transition: transform 0.2s ease;
+}
+
+footer > img[src*="Certificado"]:hover,
+footer > img[src*="dfb-bfa"]:hover,
+footer > img[src*="bbk"]:hover,
+footer > img[src*="spri"]:hover,
+footer > img[src*="gobierno-vasco"]:hover,
+footer > img[src*="EUSKALTEL"]:hover {
+    transform: scale(1.05);    /* Efecto de agrandado suave al pasar el cursor */
+}
+
+/* Eliminar espaciadores vacíos molestos (<p></p>) */
+footer > p {
+    display: none;
+}
