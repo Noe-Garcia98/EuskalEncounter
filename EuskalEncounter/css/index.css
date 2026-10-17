@@ -162,7 +162,7 @@ body{
     border-radius: 15px;
 }
 
-/* Contenedor principal de todo el pie de pagina */
+/* Contenedor principal del footer */
 footer {
     background-color: #0d2c40; 
     padding: 40px 20px;
@@ -170,7 +170,7 @@ footer {
     font-family: sans-serif;
 }
 
-/* 1. SECCION DE REDES SOCIALES (Las primeras imagenes de arriba) */
+/* 1. SECCION DE REDES SOCIALES */
 footer > img[src*="/img/discord.png"],
 footer > img[src*="instagram"],
 footer > img[src*="twitch"],
@@ -192,12 +192,14 @@ footer {
 footer > a {
     color: rgb(233, 229, 229) !important;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: bold;
     text-transform: uppercase; 
-    margin: 0 12px;            
+    margin: 0 6px;            
     letter-spacing: 0.5px;
     transition: color 0.2s;
+    write-space: nowrap;
+    display: inline-block;
 }
 
 footer > a:hover {
@@ -219,9 +221,9 @@ footer > img[src*="spri"],
 footer > img[src*="gobierno-vasco"],
 footer > img[src*="EUSKALTEL"] {
     display: inline-block;
-    max-height: 50px;          /* Nivela la altura para que se vean organizadas */
-    width: auto !important;    /* Sobrescribe los altos del HTML para no deformar */
-    margin: 15px 25px;         /* Espaciado para que respiren entre ellas */
+    max-height: 75px;          
+    width: auto !important;    
+    margin: 15px 25px;         
     vertical-align: middle;
     filter: brightness(1);
     transition: transform 0.2s ease;
@@ -233,10 +235,9 @@ footer > img[src*="bbk"]:hover,
 footer > img[src*="spri"]:hover,
 footer > img[src*="gobierno-vasco"]:hover,
 footer > img[src*="EUSKALTEL"]:hover {
-    transform: scale(1.05);    /* Efecto de agrandado suave al pasar el cursor */
+    transform: scale(1.05);    
 }
 
-/* Eliminar espaciadores vacíos molestos (<p></p>) */
 footer > p {
     display: none;
 }
