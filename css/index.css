@@ -161,3 +161,83 @@ body{
     border-color: #fff;
     border-radius: 15px;
 }
+
+/* Contenedor principal del footer */
+footer {
+    background-color: #0d2c40; 
+    padding: 40px 20px;
+    gap: 30px;                 
+    font-family: sans-serif;
+}
+
+/* 1. SECCION DE REDES SOCIALES */
+footer > img[src*="/img/discord.png"],
+footer > img[src*="instagram"],
+footer > img[src*="twitch"],
+footer > img[src*="youtube"],
+footer > img[src*="x.png"],
+footer > img[src*="tiktok"],
+footer > img[src*="facebook"] {
+    display: inline-block;
+    margin: 0 10px;            
+    transition: transform 0.2s ease;
+}
+
+/* Agrupar visualmente los iconos en linea */
+footer {
+    text-align: center;
+}
+
+/* MENU DE ENLACES (BUSCAR, CONTACTO, QUIENES SOMOS...) */
+footer > a {
+    color: rgb(233, 229, 229) !important;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    margin: 0 6px;            
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    write-space: nowrap;
+    display: inline-block;
+}
+
+footer > a:hover {
+    color: #e65c00 !important; 
+}
+
+
+footer > hr {               
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 18px 0;
+}
+
+/* SECCIÓN DE PATROCINADORES */ 
+footer > img[src*="Certificado"],
+footer > img[src*="dfb-bfa"],
+footer > img[src*="bbk"],
+footer > img[src*="spri"],
+footer > img[src*="gobierno-vasco"],
+footer > img[src*="EUSKALTEL"] {
+    display: inline-block;
+    max-height: 75px;          
+    width: auto !important;    
+    margin: 15px 25px;         
+    vertical-align: middle;
+    filter: brightness(1);
+    transition: transform 0.2s ease;
+}
+
+footer > img[src*="Certificado"]:hover,
+footer > img[src*="dfb-bfa"]:hover,
+footer > img[src*="bbk"]:hover,
+footer > img[src*="spri"]:hover,
+footer > img[src*="gobierno-vasco"]:hover,
+footer > img[src*="EUSKALTEL"]:hover {
+    transform: scale(1.05);    
+}
+
+footer > p {
+    display: none;
+}
