@@ -1,3 +1,8 @@
+/* Estilos index.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
 .nav{
     background-color: #05285a;
     margin: 0px;
@@ -14,23 +19,19 @@
 .desplegable1{
     position: relative;
     display: inline;
-    font-family:Georgia, 'Times New Roman', Times, serif;
     transition: background 0.2s, color 0.2s;
 }
 .desplegable2{
     position: relative;
     display: inline;
-    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .desplegable3{
     position:relative;
     display: inline;
-    font-family:Georgia, 'Times New Roman', Times, serif
 }
 .desplegable4{
     position: relative;
     display: inline;
-    font-family:Georgia, 'Times New Roman', Times, serif
 }
 a{
     display: inline;
@@ -44,7 +45,6 @@ a{
     margin-top: 12px;
     margin-left: 100px;
     font-size: 12px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #e5e8f0;
 }
 .singin{
@@ -58,7 +58,6 @@ a{
 
 .iniciar{
     color: rgb(252, 250, 253);
-    font-family: roboto, sans-serif;
     border: 2px solid rgb(252, 250, 253);
     color: rgb(10, 7, 12);
     background-color: rgb(203, 252, 28);
@@ -68,7 +67,7 @@ a{
 }
 /* Submenú oculto por defecto */
 .submenu {
-    list-style-type: none;
+  list-style-type: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -82,6 +81,7 @@ a{
   z-index: 10;
   text-align: justify;
 }
+
 /* Mostrar al pasar el ratón o al navegar con teclado */
 .desplegable1:hover .submenu,
 .desplegable2:hover .submenu,
@@ -97,44 +97,54 @@ a{
 .dessub{
     color: rgb(10, 7, 12);
     font-size: 13px;
-    font-family: roboto, sans-serif;
     text-align: center;
     color: rgb(10, 7, 12);
     padding: 20px;
     margin: 10px;
     border-radius: 15px;
 }
-/*Texto sobre la imagen principal */
-.contenedor{
+/*Banner Section 1*/
+#banner{
     position: relative;
-    top: -510px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    font-family: roboto, sans-serif;
-    color: rgb(252, 250, 253);
-    padding: 10px;
+}
+.principal{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+/*Texto y boton Section 1*/
+.contenedor{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: 64px;
+    color: #F5F5F5;
+    font-weight: bold;
+    text-align: left;
+}
+.flecha{
+    display: inline-block;
+    width: 45px;;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    font-size: 30px;
+    font-weight: bold;
+    color: #071C2C;
 }
 .contenedor2{
-    position: relative;
-    top: -525px;
-    left: 180px;
     transform: translate(-50%, -50%);
     font-size: 30px;
-    font-family: roboto, sans-serif;
     text-align: center;
     color: rgb(252, 250, 253);
     padding: 10px;
 
 }
 .boton{
-    position: relative;
-    top: -530px;;
-    left: 9%;
     transform: translate(-50%, -50%);
     color: rgb(252, 250, 253);
     font-size: 20px;
-    font-family: roboto, sans-serif;
     text-align: center;
     border: 2px solid rgb(252, 250, 253);
     color: rgb(10, 7, 12);
@@ -158,7 +168,6 @@ body{
     padding: 20px;
     color: white;
     border-radius: 12px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 .readMore{
@@ -173,7 +182,6 @@ footer {
     background-color: #0d2c40; 
     padding: 40px 20px;
     gap: 30px;                 
-    font-family: sans-serif;
 }
 
 /* 1. SECCION DE REDES SOCIALES */
