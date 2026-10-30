@@ -103,6 +103,7 @@ a{
     margin: 10px;
     border-radius: 15px;
 }
+
 /*Banner Section 1*/
 #banner{
     position: relative;
@@ -112,9 +113,15 @@ a{
     height: 40vh;
     object-fit: cover;
 }
+.textoybotones{
+    display:flex;
+    flex-direction: column;
+}
 
-/*Texto y boton Section 1*/
+/*Texto + linea + boton flecha Section 1*/
 .contenedor{
+    display:flex;
+    justify-content: flex-start;
     position: absolute;
     top: 30px;
     left: 50px;
@@ -122,33 +129,44 @@ a{
     color: #F5F5F5;
     font-weight: bold;
     text-align: left;
+    align-items: flex-end;
+    gap: 20px;
 }
-.flecha{
-    display: inline-block;
-    width: 45px;;
-    height: 45px;
-    border-radius: 50%;
-    background-color: #F5F5F5;
-    font-size: 30px;
-    font-weight: bold;
-    color: #071C2C;
+.linea-contenedor {
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    width: 15%;
+    border-top: 2px solid #F5F5F5;
 }
+.flecha {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.flecha img{
+    width: 65px;;
+    height: 65px;
+}
+/*Fecha + boton Section 1*/
 .contenedor2{
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    text-align: center;
-    color: rgb(252, 250, 253);
-    padding: 10px;
-
+    position:absolute;
+    top: 190px;
+    left:50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #F5F5F5;
+    margin-top: 20px;
 }
-.boton{
-    transform: translate(-50%, -50%);
-    color: rgb(252, 250, 253);
+.boton-resultados{
+    position: absolute;
+    top: 280px;
+    left:50px;
+    color: #F5F5F5;
     font-size: 20px;
     text-align: center;
-    border: 2px solid rgb(252, 250, 253);
-    color: rgb(10, 7, 12);
-    background-color: rgb(203, 252, 28);
+    border: none;
+    background-color: #F58220;
     padding: 10px;
     border-radius: 15px;
 }/* Cuerpo */
