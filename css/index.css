@@ -104,97 +104,518 @@ a{
     border-radius: 15px;
 }
 
-/*Banner Section 1*/
+/* ========================================= 
+   CONTENIDO PRINCIPAL*/
+/* ========================================= */
+
 #banner{
     position: relative;
-    color: #F5F5F5;
-    font-weight: bold;
+    width: 100%;
+    height: clamp(300px, 28vw, 400px);
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: #F5F5F5;
+    font-weight: bold;
 }
+
+    /*CONTENIDO DEL BANNER*/
+
 .imagen-banner{
+    position: absolute;
+
+    inset: 0;
+
     width: 100%;
-    height: 40vh;
+    height: 100%;
+
     object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
 }
-.contenido-banner{
+
+    /*Degradado del banner*/
+
+#banner::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(5, 20, 35, 0.90) 0%,
+        rgba(5, 20, 35, 0.65) 30%,
+        rgba(5, 20, 35, 0.20) 60%,
+        transparent 100%
+    );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+    /*Textos del banner*/
+
+.contenido-banner {
     position: absolute;
     top: 10%;
-    align-items: left;
-    flex direction: column;
-    margin top: 10%;
-    margin left: 20%
+    left: 6.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 440px;
+    max-width: 55%;
+
+    z-index: 2;
 }
 
+.contenido-banner h1 {
+    font-size: clamp(38px, 4.5vw, 64px);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 8px #071C2C;
 
-/*Texto + linea + boton flecha Section 1*/
-.contenedor{
-    display:flex;
-    justify-content: flex-start;
+    line-height: 1.12;
+
+    margin: 0; 
+}
+
+#icono-flecha-banner {
     position: absolute;
-    top: 30px;
-    left: 50px;
-    font-size: 64px;
+    top: 29%;
+    left: 31.5%; 
+
+    width: 55px;
+    height: 55px; 
+
+    object-fit: contain;
+
+    z-index: 3;
+}
+
+#linea-texto-banner {
+    width: 100%;
+    height: 1px;
+
+    border: none;
+
+    background-color: #F5F5F5;
+
+    margin: 10px 0 12px;
+}
+
+.contenido-banner h2 {
+    font-size: clamp(16px, 1.6vw, 23px);
+    font-weight: bold;
+    text-shadow: 0 2px 5px #071C2C;
+
+    margin: 0 0 40px;
+
+    line-height: 1.3;  
+}
+
+    /*Boton del banner*/
+
+.boton-resultados {
+    font-size: 18px;
     color: #F5F5F5;
     font-weight: bold;
-    text-align: left;
-    align-items: flex-end;
-    gap: 20px;
-}
-.linea-contenedor {
-    position: absolute;
-    top: 180px;
-    left: 50px;
-    width: 15%;
-    border-top: 2px solid #F5F5F5;
-}
-.flecha {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-}
-.flecha img{
-    width: 65px;;
-    height: 65px;
-}
-/*Fecha + boton Section 1*/
 
-.boton-resultados{
-    position: absolute;
-    top: 280px;
-    left:50px;
-    color: #F5F5F5;
-    font-size: 20px;
-    text-align: center;
-    border: none;
     background-color: #F58220;
-    padding: 10px;
-    border-radius: 15px;
-}/* Cuerpo */
+    border: none;
+    border-radius: 10px;
+
+    padding: 14px 18px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-resultados:hover {
+    background-color: #FF9B3D;
+
+    transform: translateY(-2px);
+}
+
+/* FONDO DEL MAIN */
+
 body{
    margin: 0px;
-   background-color: #092043;
+   background-color: #102F42;
 }
-/*Categorías y eventos */
-.card{
+
+/* ========================================= 
+   PARA DESKTOP
+/* ========================================= */
+
+@media screen and (min-width: 1400px) {
+
+    .contenido-banner {
+        left: 6.5%;
+
+        width: 460px;
+    }
+
+    #icono-flecha-banner {
+        
+        left: 31.5%;
+    }
+
+}
+
+/* ========================================= 
+   PARA TABLETS
+/* ========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    #banner {
+        height: 350px;
+    }
+
+    .contenido-banner {
+        left: 5%;
+
+        width: 400px;
+        max-width: 60%;
+
+        top: 10%;
+    }
+
+    .contenido-banner h1 {
+        font-size: clamp(36px, 5vw, 50px);
+    }
+
+    .contenido-banner h2 {
+        font-size: 17px;
+
+        margin-bottom: 25px;
+    }
+
+    #icono-flecha-banner {
+        left: 42%;
+        top: 22%;
+        width: 45px;
+        height: 45px;
+    }
+
+    #linea-texto-banner {
+        width: 67%;
+
+        margin: 10px 0;
+    }
+
+
+}
+
+/* ========================================= 
+   PARA MOVIL
+/* ========================================= */
+
+@media screen and (max-width: 600px) {
+
+    #banner {
+        height: 380px;
+    }
+
+    .imagen-banner {
+        object-position: center;
+    }
+
+    #banner::after {
+        background: linear-gradient(
+            90deg,
+            rgba(5, 20, 35, 0.90) 0%,
+            rgba(5, 20, 35, 0.70) 55%,
+            rgba(5, 20, 35, 0.35) 100%
+        );
+    }
+
+    .contenido-banner {
+        top: 10%;
+
+        left: 6%;
+
+        width: 88%;
+        max-width: none;
+    }
+
+    .contenido-banner h1 {
+        font-size: 42px;
+
+        line-height: 1.1;
+    }
+
+    #linea-texto-banner {
+        width: 85%;
+
+        margin: 10px 0;
+    }
+
+    .contenido-banner h2 {
+        font-size: 16px;
+
+        margin-bottom: 25px;
+    }
+
+    .boton-resultados {
+        font-size: 16px;
+
+        padding: 12px 15px;
+    }
+
+    #icono-flecha-banner {
+        top: 23%;
+
+        left: auto;
+        right: 12%;
+
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+/* =========================================
+   SECCION CATEGORIAS Y EVENTOS
+/* ========================================= */
+
+#categorias {
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+/* TARJETAS + GRID*/
+
+.cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    max-width: 1500px;
+    width: 100%;
+
+    margin: 0 auto;
 }
-.card1, .card2, .card3, .card4, .card5, .card6{
-    background: linear-gradient(135deg, #6587a9, #113a73);
-    padding: 20px;
-    color: white;
-    border-radius: 12px;
+
+/* TARJETAS */
+
+.card {
+    position: relative;
+
+    aspect-ratio: 630 / 340;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    color: #F5F5F5;
+}
+
+    /* FONDO TARJETAS */
+
+.card img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+/* Degradado del fondo tarjetas */
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent 15%,
+        rgba(7, 28, 44, 0.20) 35%,
+        rgba(7, 28, 44, 0.65) 65%,
+        rgba(7, 28, 44, 0.90) 100%
+    );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+/* CONTENIDO TARJETAS */
+
+.card-content {
+    position: absolute;
+    top: 8%;
+    right: 4%;
+
+    width: 50%;
+    height: 84%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+.card-content h3 {
+    font-size: clamp(17px, 1.4vw, 23px);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    margin: 0 0 15px;
+
+    text-shadow:
+        0 2px 4px rgba(7, 28, 44, 1),
+        0 0 12px rgba(7, 28, 44, 1);
+}
+
+.card-content p {
+    font-size: clamp(13px, 1.05vw, 17px);
+    line-height: 1.4;
+
+    margin: 0 0 15px;
+
+    text-shadow:
+        0 2px 5px rgba(7, 28, 44, 1);
+}
+
+    /* Enlaces Leer mas */
+
+.readMore {
+    align-self: flex-end;
+    color: #F5F5F5;
     font-weight: bold;
+    text-decoration: none;
+    font-size: clamp(14px, 1.05vw, 17px);
+
+    text-shadow:
+        0 2px 5px rgba(7, 28, 44, 1);
+
+    transition: color 0.3s ease;
+} 
+
+.readMore:hover {
+    color: #FF9B3D;
+    text-decoration: underline;
 }
-.readMore{
-    background: #343d4b;
-    padding: 12px 15px;
-    border-color: #fff;
-    border-radius: 15px;
+
+/* =========================================
+   DESKTOP
+/* ========================================= */
+
+@media screen and (min-width: 1400px) {
+
+    .cards-container {
+        max-width: 1600px;
+        gap: 30px;
+    }
+
+    .card-content {
+        width: 52%;
+    }
 }
+
+/* =========================================
+   TABLET
+/* ========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .card-content {
+        width: 48%;
+        right: 4%;
+    }
+
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+    }
+
+    .readMore {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   MOVIL
+/* ========================================= */
+
+@media screen and (max-width: 600px) {
+
+    #categorias {
+        padding: 15px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        aspect-ratio: 630 / 340;
+    }
+
+    .card-content {
+        width: 48%;
+        right: 5%;
+        top: 5%;
+        height: 90%;
+    }
+
+    .card-content h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
+
+    .readMore {
+        font-size: 12px;
+    }
+
+}
+
+
+
 
 /* Contenedor principal del footer */
 footer {

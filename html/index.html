@@ -62,68 +62,179 @@
             </form>
         </nav>
     </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
     <main>
+
+        <!-- Banner principal -->
+
         <section id="banner">
-            <!-- Esto es la imagen principal-->
-            <img class="imagen-banner" src="../img/euskalencounter-principal.jpg" width="2000px">
+        
+            <img class="imagen-banner" 
+                 src="../img/euskalencounter-principal.jpg"
+                 alt="Euskal Encounter">
 
             <div class="contenido-banner">
+
                 <h1>EUSKAL<br>ENCOUNTER</h1>
+
                 <hr id="linea-texto-banner">
-                <h2>23-26 JULIO 2026 - BEC (BILBAO)</h2>
-                <input type="button" class="boton-resultados" value="Ver resutados anteriores"/>
+
+                <h2>
+                    23-26 JULIO 2026 - BEC (BILBAO)
+                </h2>
+
+                <input type="button" 
+                       class="boton-resultados" 
+                       value="Ver resutados anteriores  →"/>
+
             </div>
 
-            <img id="icono-flecha-banner" src="../img/flecha_icono.png" alt="icono-flecha-banner">
+            <img id="icono-flecha-banner"
+                 src="../img/flecha_icono.png"
+                 alt="icono-flecha-banner">
+
         </section>
 
+        <!-- Categorias -->
+
         <section id="categorias">
-        <div class="card">
-            <div class="card1">
-                <img src="../img/creatividad_digital_card.jpg" width="630" height="340">
-                <h3 class="container">CREATIVIDAD DIGITAL</h3>
-                <div>
-                <p>Es el arte de la era de los ordenadores. Se materializa en tres grandes temas, la creación de imágenes digitales...</p>
-                <a class="readMore" href="#">Leer más →</a>
-                </div>
-            </div>
+        <div class="cards-container">
 
-            <div class="card2">
-                <img src="../img/hardware_card.jpg" width="630" height="340">
-                <h3>HARDWARE</h3>
-                <p>El modding, además de la modificación, cambio y personalización de los equipos, de sus componentes, los periféricos...</p>
-                <a class="readMore" href="#">Leer más →</a>
-            </div>
+            <!-- Creatividad digital -->
 
-            <div class="card3">
-                <img src="../img/software_libre_card.jpg" width="630" height="340">
-                <h3>SOFTWARE LIBRE</h3>
-                <p>Desde tu móvil hasta los servidores de la Euskal Encounter, el mundo no funcionaría sin el software libre. ¡Forma parte de él!</p>
-                <a class="readMore" href="#">Leer más →</a>
-            </div>
+            <article class="card">
+                    <img src="../img/creatividad_digital_card.jpg"
+                        alt="Creatividad digital">
 
-            <div class="card4">
-                <img src="../img/juegos_card.jpg" width="630" height="340">
-                <h3>JUEGOS</h3>
-                <p>Participa y reta a tus amigos en las diversas competiciones de juegos para PC y videoconsolas en esta edición de la Euskal Encounter. ¡No te las puedes perder!</p>
-                <a class="readMore" href="#">Leer más →</a>
-            </div>
+                    <div class="card-content">
+                        <h3>CREATIVIDAD DIGITAL</h3>
 
-            <div class="card5">
-                <img src="../img/streaming_card.jpg" width="630" height="340">
-                <h3>STREAMING</h3>
-                <p>Alguien tiene que contarle al mundo lo que pasa en las Encounters. Si te gusta crear contenido —directos, vídeos o bailar...</p>
-                <a class="readMore" href="#">Leer más →</a>
-            </div>
+                        <p>
+                            Es el arte de la era de los ordenadores.
+                            Se materializa en tres grandes temas,
+                            la creación de imágenes digitales...
+                        </p>
 
-            <div class="card6">
-                <img src="../img/otras_actividades_card.jpeg" width="630" height="340">
-                <h3>OTRAS ACTVIDADES</h3>
-                <p>No importa si eres un scener, un gamer, te gusta el modding, o si simplemente no encajas en ningún otro lado... ¡Esta es tu sección! Solo te pedimos que dejes la vergüenza a un lado.</p>
-                <a class="readMore" href="#">Leer más →</a>
-            </div>
+                        <a class="readMore" href="#">
+                            Leer más →
+                        </a>
+                    </div>
+                </article>
+
+            <!-- Hardware -->
+
+            <article class="card">
+                    <img src="../img/hardware_card.jpg"
+                        alt="Hardware">
+
+                    <div class="card-content">
+                        <h3>HARDWARE</h3>
+
+                        <p>
+                            El modding, además de la modificación,
+                            cambio y personalización de los equipos,
+                            de sus componentes, los periféricos...
+                        </p>
+
+                        <a class="readMore" href="#">
+                            Leer más →
+                        </a>
+                    </div>
+                </article>
+
+            <!-- Software libre -->
+
+            <article class="card">
+                    <img src="../img/software_libre_card.jpg"
+                        alt="Software libre">
+
+                    <div class="card-content">
+                        <h3>SOFTWARE LIBRE</h3>
+
+                        <p>
+                            Desde tu móvil hasta los servidores
+                            de la Euskal Encounter, el mundo no
+                            funcionaría sin el software libre.
+                            ¡Forma parte de él!
+                        </p>
+
+                        <a class="readMore" href="#">
+                            Leer más →
+                        </a>
+                    </div>
+                </article>
+
+            <!-- Juegos -->
+
+            <article class="card">
+                    <img src="../img/juegos_card.jpg"
+                        alt="Juegos">
+
+                    <div class="card-content">
+                        <h3>JUEGOS</h3>
+
+                        <p>
+                            Participa y reta a tus amigos en las
+                            diversas competiciones de juegos para
+                            PC y videoconsolas en esta edición
+                            de la Euskal Encounter.
+                        </p>
+
+                        <a class="readMore" href="#">
+                            Leer más →
+                        </a>
+                    </div>
+                </article>
+
+            <!-- Streaming -->
+
+            <article class="card">
+                    <img src="../img/streaming_card.jpg"
+                        alt="Streaming">
+
+                    <div class="card-content">
+                        <h3>STREAMING</h3>
+
+                        <p>
+                            Alguien tiene que contarle al mundo
+                            lo que pasa en las Encounters.
+                            Si te gusta crear contenido...
+                        </p>
+
+                        <a class="readMore" href="#">
+                            Leer más →
+                        </a>
+                    </div>
+                </article>
+
+            <!-- Otras actividades -->
+
+            <article class="card">
+                    <img src="../img/otras_actividades_card.jpeg"
+                        alt="Otras actividades">
+
+                    <div class="card-content">
+                        <h3>OTRAS ACTIVIDADES</h3>
+
+                        <p>
+                            No importa si eres un scener, un gamer,
+                            te gusta el modding, o si simplemente
+                            no encajas en ningún otro lado...
+                        </p>
+
+                        <a class="readMore" href="#">
+                            Leer más →
+                        </a>
+                    </div>
+                </article>
+
         </div>
+        </section>
+
     </main>
+
     <footer>
         <img src="../img/discord.png" width="50" height="30">
         <img src="../img/Instagram.png" width="50" height="30">
