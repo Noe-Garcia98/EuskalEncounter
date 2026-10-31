@@ -107,16 +107,25 @@ a{
 /*Banner Section 1*/
 #banner{
     position: relative;
+    color: #F5F5F5;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
 }
-.principal{
+.imagen-banner{
     width: 100%;
     height: 40vh;
     object-fit: cover;
 }
-.textoybotones{
-    display:flex;
-    flex-direction: column;
+.contenido-banner{
+    position: absolute;
+    top: 10%;
+    align-items: left;
+    flex direction: column;
+    margin top: 10%;
+    margin left: 20%
 }
+
 
 /*Texto + linea + boton flecha Section 1*/
 .contenedor{
