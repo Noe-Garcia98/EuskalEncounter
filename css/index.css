@@ -1,5 +1,4 @@
 /* Estilos index.css */
-
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -67,35 +66,41 @@ a{
 }
 
 .iniciar{
-    color: rgb(252, 250, 253);
-    border: 2px solid rgb(252, 250, 253);
-    color: rgb(10, 7, 12);
-    background-color: rgb(203, 252, 28);
-    border-color: #0e0101;
+    color: #ffffff;
+    background-color: #F58220;
+    border: 1px solid #0e0101;
     border-radius: 15px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+} 
 
+.iniciar:hover {
+    background-color: #FF9B3D;
 }
-/* Submenú oculto por defecto */
+
+/* Submenú oculto */
 .submenu {
     list-style-type: none;
     position: absolute;
     top: 100%;
     left: 50%;
-    min-width: 220px;       /* Un poquito más ancho para que quepa todo bien */
-    background-color: #05285a; /* Ponemos el mismo azul oscuro que tu barra superior */
-    padding: 10px 15px;     /* Espacio interno para que respiren las opciones */
+    min-width: 220px;        
+    background-color: #05285a;
+    padding: 10px 15px;    
     margin: 0;
-        /* ESTO ES LO COMPLETAMENTE NUEVO QUE LOS OBLIGA A PONERSE EN VERTICAL */
+        
     display: flex;
     flex-direction: column;
-    gap: 12px;              /* Espacio vertical limpio entre cada sub-enlace */
+    gap: 12px;               
 
-    text-align: center;       /* Alineamos el texto a la izquierda para que se vea más limpio */
-    align-items: center;    /* Centrar los enlaces horizontalmente */
+    text-align: center;    
+    align-items: center;    
 
     visibility: hidden;
     opacity: 0;
-    transform: translateX(-50%) translateY(-8px); /* Esto hace que el submenú aparezca un poquito más arriba y luego baje suavemente */
+    transform: translateX(-50%) translateY(-8px);
     transition: opacity .2s, transform .2s, visibility .2s;
     z-index: 10;
 }
@@ -639,7 +644,6 @@ body{
 
 
 
-
 /* Contenedor principal del footer */
 footer {
     background-color: #f5f8fb; 
@@ -675,15 +679,10 @@ footer > .footer-menu > a {
     display: inline-block;
 }
 
-
+/* Efecto hover para los enlaces del menú */
 footer > .footer-menu  a:hover {
     color: #e65c00 !important; 
 }
-
-
-
-
-
 
 /* SECCIÓN DE PATROCINADORES */ 
 footer > .footer-patrocinadores {
@@ -693,11 +692,13 @@ footer > .footer-patrocinadores {
     margin-top: 20px;          
     flex-wrap: wrap;           
 }
+/* Estilo de los logos de patrocinadores */
 footer > .footer-patrocinadores img {
     max-width: 100px;          
     height: auto;              
     object-fit: contain;       
 }
+/* Efecto hover para agrandar los logos */
 footer > .footer-patrocinadores img:hover {
     transform: scale(1.1);     
     transition: transform 0.3s; 
@@ -718,81 +719,114 @@ footer > .footer-patrocinadores img.logo-spri {
 footer > .footer-patrocinadores img.logo-gv {
     max-width: 180px;
 }
+/* ========================================================
+   REPOSITORIO UNIFICADO: NAV, FORM Y FOOTER COMPLETO
+   ======================================================== */
 @media (max-width: 768px) {
-    /* ========================================================
-       CONFIGURACIÓN DEL NAV (ARRIBA) PARA MÓVIL 
-       ======================================================== */
+
+    /* 1. CONFIGURACIÓN DEL NAV (MENÚ DE NAVEGACIÓN) */
     .nav {
-        flex-direction: column !important; /* Apila el logo, los enlaces y el login hacia abajo */
+        flex-direction: column !important; 
         gap: 15px !important;
         padding: 15px 10px !important;
         width: 100% !important;
+        box-sizing: border-box !important;
+        border-bottom-left-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
     }
-
-    /* Forzamos al logo a centrarse arriba */
+    
     #logo {
         justify-content: center !important;
         margin: 0 !important;
     }
 
-    /* Los enlaces principales (EVENTOS, ASISTENCIA...) en horizontal apretaditos */
     .nav ul {
-        flex-direction: row !important; /* Mantener horizontal */
-        flex-wrap: wrap !important;     /* Si no caben, bajan solos */
+        flex-direction: row !important; 
+        flex-wrap: wrap !important;     
         justify-content: center !important;
         gap: 12px !important;
         margin: 0 !important;
         padding: 0 !important;
     }
 
-    /* Las casillas de Usuario y Contraseña abajo del todo bien alineadas */
+    /* 2. CONFIGURACIÓN DEL FORM (TU FORMULARIO EN MÓVIL) */
     .form {
-        flex-direction: column !important; /* Las casillas se apilan para que quepan */
+        margin-left: 0px !important;       
+        margin-top: 10px !important;        
+        flex-direction: column !important; 
         gap: 8px !important;
         width: 100% !important;
-        align-items: center !important;
+        align-items: center !important;    
         padding: 0 !important;
     }
 
     .form input {
-        width: 80% !important; /* Hace las casillas más cómodas para escribir con el dedo */
+        width: 80% !important;             
         max-width: 250px !important;
     }
 
-    /* ========================================================
-       CONFIGURACIÓN DEL FOOTER (ABAJO) PARA MÓVIL 
-       ======================================================== */
+    /* 3. CONFIGURACIÓN DEL FOOTER PADRE EN VERTICAL */
     footer {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;    
+        width: 100% !important;
         padding: 30px 15px !important;
+        gap: 30px !important;              
+        box-sizing: border-box !important;
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+    }
+
+    .footer-menu {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        justify-items: center !important;                
+        align-items: center !important;
+        gap: 15px 10px !important;                        
+        width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .footer-menu a {
+        text-align: center !important;
+        font-size: 12px !important;
+    }
+
+    .footer-redes {
+        display: flex !important;
+        flex-wrap: wrap !important;        
+        justify-content: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    
+    .footer-patrocinadores {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        justify-items: center !important;                
+        align-items: center !important;
         gap: 25px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        /* Rompe cualquier bloqueo lateral y se estira al 100% de la pantalla */
-        position: relative !important;
-        width: 100vw !important;
-        left: 50% !important;
-        right: 50% !important;
-        margin-left: -50vw !important;
-        margin-right: -50vw !important;
+        width: 100% !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
     }
 
-    footer > .footer-menu {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 12px !important;
-    }
-
-    footer > .footer-menu a {
-        margin: 0 !important;
+    .footer-patrocinadores img {
+        max-width: 100% !important;
+        height: auto !important;
     }
 }
 
-/* añadir un pequeño espacio para que no se vea tan pegado el formulario al menu de navegación */
+/* ========================================================
+   .FORM PARA PANTALLAS GRANDES (FUERA DEL @MEDIA)
+   ======================================================== */
 .form {
     display: flex;
     align-items: center;
     gap: 12px;
     padding-right: 20px;
+    margin-left: 100px; 
 }
+
