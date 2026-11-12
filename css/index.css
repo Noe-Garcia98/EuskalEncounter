@@ -218,7 +218,7 @@ a{
 #icono-flecha-banner {
     position: absolute;
     top: 29%;
-    left: 31.5%; 
+    left: 36.5%; 
 
     width: 55px;
     height: 55px; 
@@ -286,7 +286,7 @@ body{
    PARA DESKTOP
 /* ========================================= */
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
 
     .contenido-banner {
         left: 6.5%;
@@ -331,8 +331,8 @@ body{
     }
 
     #icono-flecha-banner {
-        left: 42%;
-        top: 22%;
+        left: 67%;
+        top: 21%;
         width: 45px;
         height: 45px;
     }
@@ -350,68 +350,62 @@ body{
    PARA MOVIL
 /* ========================================= */
 
+
 @media screen and (max-width: 600px) {
-
-    #banner {
-        height: 380px;
+    header {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    .imagen-banner {
-        object-position: center;
+    header .nav {
+        position: relative !important;
+        width: 100% !important;
+        min-height: 76px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        padding: 10px 52px !important;
+        background-color: #05285a !important;
+        border-radius: 0 !important;
     }
 
-    #banner::after {
-        background: linear-gradient(
-            90deg,
-            rgba(5, 20, 35, 0.90) 0%,
-            rgba(5, 20, 35, 0.70) 55%,
-            rgba(5, 20, 35, 0.35) 100%
-        );
+    /* Icono hamburguesa ficticio, sin acción todavía */
+    header .nav::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 17px;
+        width: 25px;
+        height: 19px;
+        transform: translateY(-50%);
+        background:
+            linear-gradient(#ffffff, #ffffff) top / 25px 2px no-repeat,
+            linear-gradient(#ffffff, #ffffff) center / 25px 2px no-repeat,
+            linear-gradient(#ffffff, #ffffff) bottom / 25px 2px no-repeat;
+        border: 0;
+        pointer-events: none;
     }
 
-    .contenido-banner {
-        top: 10%;
-
-        left: 6%;
-
-        width: 88%;
-        max-width: none;
+    /* Logo centrado */
+    header #logo {
+        display: block !important;
+        width: 125px !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        object-fit: contain !important;
     }
 
-    .contenido-banner h1 {
-        font-size: 42px;
-
-        line-height: 1.1;
+    /* Ocultar navegación y login en móvil: estarán en el futuro sidebar */
+    header .nav > ul,
+    header .nav > .form {
+        display: none !important;
     }
-
-    #linea-texto-banner {
-        width: 85%;
-
-        margin: 10px 0;
-    }
-
-    .contenido-banner h2 {
-        font-size: 16px;
-
-        margin-bottom: 25px;
-    }
-
-    .boton-resultados {
-        font-size: 16px;
-
-        padding: 12px 15px;
-    }
-
-    #icono-flecha-banner {
-        top: 23%;
-
-        left: auto;
-        right: 12%;
-
-        width: 40px;
-        height: 40px;
-    }
-
 }
 
 /* =========================================
@@ -675,7 +669,7 @@ footer > .footer-menu > a {
     margin: 0 6px;            
     letter-spacing: 0.5px;
     transition: color 0.2s;
-    write-space: nowrap;
+    white-space: nowrap;
     display: inline-block;
 }
 
@@ -829,4 +823,3 @@ footer > .footer-patrocinadores img.logo-gv {
     padding-right: 20px;
     margin-left: 100px; 
 }
-
